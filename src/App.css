@@ -35,3 +35,14 @@ body {
 		transform: rotate(360deg);
 	}
 }
+
+.grid {
+	margin: 5% auto;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.App {
+	margin: 0, auto;
+}

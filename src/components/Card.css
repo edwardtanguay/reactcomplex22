@@ -1,0 +1,28 @@
+.card {
+	box-shadow: 0 4px 8px 0 black;
+	transition: 1s;
+	width: 20%;
+	background-color: white;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+.price {
+	color: red;
+	font-weight: 800;
+	font-size: 35px;
+	text-shadow: 0px 0px 5px #ccc;
+
+}
+
+.container {
+	padding: 2px 16px;
+	background-color: white;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+}
+
+.card-image {
+	width: 100%;
+}
+
