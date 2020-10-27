@@ -16,34 +16,47 @@ class App extends Component {
 			toggleLogo: true,
 			cards: [
 				{
-					id: 1
+					id: 1,
+					animation: 'card'
 				},
 				{
-					id: 2
+					id: 2,
+					animation: 'card'
 				},
 				{
-					id: 3
+					id: 3,
+					animation: 'card'
 				},
 				{
-					id: 4
+					id: 4,
+					animation: 'card'
 				},
 				{
-					id: 5
+					id: 5,
+					animation: 'card'
 				},
 				{
-					id: 6
+					id: 6,
+					animation: 'card'
 				}
 			]
 		};
 
 		// need for ES6
 		this.toggleLogo = this.toggleLogo.bind(this);
+		this.clickCard = this.clickCard.bind(this);
 	}
 
 	toggleLogo(event) {
 		this.setState((prevState) => ({
 			toggleLogo: !prevState.toggleLogo
 		}));
+	}
+
+	clickCard(card) {
+		let cards = this.state.cards;
+		cards.find(m => m.id == card.id).animation = "card animate__animated animate__zoomOut";
+		this.setState({ cards })
 	}
 
 	render() {
@@ -72,7 +85,7 @@ class App extends Component {
 				<div className="grid">
 					{this.state.cards.map((card) => {
 						return (
-							<Card duration={duration} key={card.id}/>
+							<Card duration={duration} key={card.id} card={card} clickCard={this.clickCard} />
 						)
 					})}
 				</div>
